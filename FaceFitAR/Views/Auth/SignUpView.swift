@@ -39,15 +39,11 @@ struct SignUpView: View {
                     
                     // Header
                     VStack(spacing: 12) {
-                        ZStack {
-                            Circle()
-                                .fill(Color.theme.accent.opacity(0.2))
-                                .frame(width: 70, height: 70)
-                            
-                            Image(systemName: "person.badge.plus")
-                                .font(.system(size: 30))
-                                .foregroundStyle(Color.theme.gradient)
-                        }
+                        Image("LoginLogo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80, height: 80)
+                            .clipShape(RoundedRectangle(cornerRadius: 16))
                         
                         Text("Create Account")
                             .font(.system(size: 28, weight: .bold, design: .rounded))

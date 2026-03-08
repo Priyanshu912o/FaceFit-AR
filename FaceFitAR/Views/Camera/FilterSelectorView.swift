@@ -53,9 +53,17 @@ struct FilterItemView: View {
                         )
                         .scaleEffect(isSelected ? 1.1 : 1.0)
                     
-                    Image(systemName: filter.iconName)
-                        .font(.system(size: 22))
-                        .foregroundColor(isSelected ? .white : Color.theme.textSecondary)
+                    if let imageName = filter.imageName {
+                        Image(imageName)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 44, height: 44)
+                            .clipShape(Circle())
+                    } else {
+                        Image(systemName: filter.iconName)
+                            .font(.system(size: 22))
+                            .foregroundColor(isSelected ? .white : Color.theme.textSecondary)
+                    }
                 }
                 
                 Text(filter.name)

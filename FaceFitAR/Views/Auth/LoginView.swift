@@ -39,15 +39,11 @@ struct LoginView: View {
                         
                         // Logo
                         VStack(spacing: 12) {
-                            ZStack {
-                                Circle()
-                                    .fill(Color.theme.accent.opacity(0.2))
-                                    .frame(width: 80, height: 80)
-                                
-                                Image(systemName: "face.smiling.fill")
-                                    .font(.system(size: 36))
-                                    .foregroundStyle(Color.theme.gradient)
-                            }
+                            Image("LoginLogo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                                .clipShape(RoundedRectangle(cornerRadius: 20))
                             
                             Text("FaceFit AR")
                                 .font(.system(size: 32, weight: .bold, design: .rounded))
