@@ -64,6 +64,7 @@ struct CameraView: View {
                 // Filter selector
                 FilterSelectorView(
                     selectedFilter: $cameraVM.selectedFilter,
+                    filters: cameraVM.sortedFilters,
                     onFilterSelected: { filter in
                         cameraVM.selectFilter(filter, userId: authVM.currentUser?.id)
                         showFilterPopup(filter.displayName)
@@ -79,6 +80,11 @@ struct CameraView: View {
         }
         .animation(.easeInOut(duration: 0.3), value: cameraVM.isFaceDetected)
         .animation(.spring(response: 0.4), value: showFilterLabel)
+        .onAppear {
+            if let userId = authVM.currentUser?.id {
+                cameraVM.loadFilterOrder(userId: userId)
+            }
+        }
     }
     
     // MARK: - Top Bar

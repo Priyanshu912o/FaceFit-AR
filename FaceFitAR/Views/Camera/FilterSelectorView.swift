@@ -2,9 +2,8 @@ import SwiftUI
 
 struct FilterSelectorView: View {
     @Binding var selectedFilter: FilterType
+    var filters: [FilterModel] = FilterModel.allFilters
     var onFilterSelected: (FilterType) -> Void
-    
-    private let filters = FilterModel.allFilters
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

@@ -55,4 +55,30 @@ class FirestoreService {
             }
         }
     }
+    
+    /// Fetches filter usage counts for a specific user from Firestore
+    func fetchFilterUsageCounts(userId: String, completion: @escaping ([FilterType: Int]) -> Void) {
+        guard let db = db else {
+            completion([:])
+            return
+        }
+        
+        db.collection("filterUsage")
+            .whereField("userId", isEqualTo: userId)
+            .getDocuments { snapshot, error in
+                guard let documents = snapshot?.documents, error == nil else {
+                    completion([:])
+                    return
+                }
+                
+                var counts: [FilterType: Int] = [:]
+                for doc in documents {
+                    if let rawType = doc.data()["filterType"] as? String,
+                       let filterType = FilterType(rawValue: rawType) {
+                        counts[filterType, default: 0] += 1
+                    }
+                }
+                completion(counts)
+            }
+    }
 }
