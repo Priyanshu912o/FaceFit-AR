@@ -17,6 +17,7 @@
 		A10008 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10008 /* MediaViewModel.swift */; };
 		A10009 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10009 /* FirestoreService.swift */; };
 		A10010 /* PhotoLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10010 /* PhotoLibraryService.swift */; };
+		A10020 /* VideoRecordingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10021 /* VideoRecordingService.swift */; };
 		A10011 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10011 /* InputField.swift */; };
 		A10012 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10012 /* PrimaryButton.swift */; };
 		A10013 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10013 /* LoginView.swift */; };
@@ -25,6 +26,7 @@
 		A10016 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10016 /* CameraView.swift */; };
 		A10017 /* FilterSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10017 /* FilterSelectorView.swift */; };
 		A10018 /* PhotoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10018 /* PhotoPreviewView.swift */; };
+		A10022 /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10022 /* VideoPreviewView.swift */; };
 		A10019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10019 /* Assets.xcassets */; };
 		A10030 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D10001 /* FirebaseAuth */; };
 		A10031 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D10002 /* FirebaseFirestore */; };
@@ -43,6 +45,7 @@
 		B10008 /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
 		B10009 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		B10010 /* PhotoLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryService.swift; sourceTree = "<group>"; };
+		B10021 /* VideoRecordingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecordingService.swift; sourceTree = "<group>"; };
 		B10011 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		B10012 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		B10013 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		B10016 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		B10017 /* FilterSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectorView.swift; sourceTree = "<group>"; };
 		B10018 /* PhotoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewView.swift; sourceTree = "<group>"; };
+		B10022 /* VideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
 		B10019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B10020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B49A19D82F5D4715000A3877 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B10018 /* PhotoPreviewView.swift */,
+				B10022 /* VideoPreviewView.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			children = (
 				B10009 /* FirestoreService.swift */,
 				B10010 /* PhotoLibraryService.swift */,
+				B10021 /* VideoRecordingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -291,6 +297,8 @@
 				A10016 /* CameraView.swift in Sources */,
 				A10017 /* FilterSelectorView.swift in Sources */,
 				A10018 /* PhotoPreviewView.swift in Sources */,
+				A10022 /* VideoPreviewView.swift in Sources */,
+				A10020 /* VideoRecordingService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
