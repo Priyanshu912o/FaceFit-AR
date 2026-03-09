@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # FaceFit AR
+=======
+# 👑 FaceFit AR
+>>>>>>> 5f40b83 (Fix gitignore and remove tracked ignored files)
 
 > Real-time AR face filter app for iOS — built with ARKit, SceneKit & SwiftUI
 
